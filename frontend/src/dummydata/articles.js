@@ -51,4 +51,4 @@ const articles = [
     },
   ];
 
-export default articles; //this needs to be fixed to export default articles
+export default articles; //step 20 fix

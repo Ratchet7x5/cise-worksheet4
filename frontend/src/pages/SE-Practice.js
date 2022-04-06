@@ -1,22 +1,22 @@
-import articles from "../dummydata/articles";
-import TableStyles from "../components/TableStyle";
-import Table from "../components/EvidenceTable";
-import TableColumns from "../components/TableColumns";
-import Dropdown from "../components/Dropdown";
-import { useState } from "react";
+import articles from "../dummydata/articles.js";
+import Styles from "../components/TableStyle.js";
+import Table from "../components/EvidenceTable.js";
+import tablecolumns from "../components/TableColumns.js";
+import Dropdown from "../components/Dropdown.js";
 
 const SEPractice = () => {
-  const [selectedPractice, setSelectedPractice] = useState("");
-
-  return (
-    <div>
-      <h2>Select SE Practice to get evidence for the claimed benefits</h2>
-      <Dropdown setSelectedPractice={setSelectedPractice}/>
-      <TableStyles>
-        <Table selectedPractice={selectedPractice} data={articles} columns={TableColumns} />
-      </TableStyles>
-    </div>
-  );
-};
-
+    return (
+      <div>
+        <h2>Select SE Practice to get evidence for the claimed benefits</h2>
+        <Dropdown/>
+               <Styles>
+                 <Table
+                  data={articles}
+                  columns={tablecolumns}
+                 />
+              </Styles>
+      </div>
+    );
+}
+ 
 export default SEPractice;
